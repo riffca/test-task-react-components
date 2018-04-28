@@ -1,4 +1,5 @@
 import React from 'react';
+import Locations from './Locations'
 export default class Categories extends React.Component {
 
   constructor() {
@@ -14,17 +15,18 @@ export default class Categories extends React.Component {
 	        "Festivals"
 	    ],
 	    selected: "Categories"
-	}   
+	}  
+	this.showMenu = new Locations().showMenu.bind(this) 
   }
   render() {
 
-	let categories = this.state.categories.map((item, index)=><li key={index}>{ item } </li>)
+	let categories = this.state.categories.map((item, index)=><li  onClick={this.showMenu.bind(this, item)} key={index}>{item}</li>)
 	return (
 		<div id="categories_menu">
-			<p> { this.state.selected } </p>
-	 		<ul>
+			<p onClick={this.showMenu.bind(this)}> { this.state.selected } </p>
+	 		{ !this.state.showMenu ? null : <ul>
 	 			{ categories }
-	 		</ul>
+	 		</ul> }
 		</div>
 	);
 

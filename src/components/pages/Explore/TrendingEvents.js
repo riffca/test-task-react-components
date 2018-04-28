@@ -38,18 +38,19 @@ export default class TrendingEvents extends React.Component {
   	let events = this.state.events.map((e, index)=> {
   		return (
   			<div key={index} className={ classnames("event_item",{_wide: e.wide})}> 
-	  			<span>{e.date}</span>
-	  			<span>{e.label}</span>
+  	  			<span>{e.date}</span>
+  	  			<span>{e.label}</span>
   			</div>
   		)
   	})
 
     return (
-     	<div>
+     	<div id="trending_events">
      		<h3>Trending events</h3>
-      		{events}
+      	<div className="_wrap_items">{events}</div>
      	</div>
     );
+    
   }
 
 }

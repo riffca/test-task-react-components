@@ -1,10 +1,26 @@
+$color_blue: #009ad6;
+
+$color_blue_bright: #f1f6f9;
+
+$color_blue_light: #e7f0f7;
+
+$color_grey: #3b3f4a;
+
+$color_grey_light: #8b98ab;
+
+
 #header {
 
+	> * {
+		color: $color_grey;
+	}
+
 	height: 56px;
-	background: green;
+	border-bottom: 1px solid $color_blue_bright;
 	display: flex;
 	> div {
 		flex: 1;
+		cursor: pointer;
 	}
 	div {
 		display: inline-block;
@@ -78,9 +94,20 @@
 .avatar {
 	padding: 0 !important;
 	margin: 0 !important;
-	border: 1px solid black;
+	border: 1px solid $color_grey_light;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 	overflow: hidden;
+}
+
+span.svg_arrow {
+
+	svg {
+		fill: $color_grey;
+	}
+	._rotate {
+		transform: rotate(180deg);
+	}
+
 }

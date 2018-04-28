@@ -1,0 +1,46 @@
+.event_item {
+
+	border: 1px solid #8b98ab;
+	height: 100px;
+	flex: 1;
+
+	&._wide {
+		flex: 2;
+	}
+}
+
+
+._wrap_items {
+	display: flex;
+}
+
+@mixin centeredBlock {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#trending_events {
+
+
+	margin-top: 20px;
+	h3 {
+		margin: 10px 0;
+	}
+}
+
+#explore {
+
+	@include centeredBlock;
+
+	._title_text {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		font-size: 2rem;
+	}
+
+	._bottom_text {
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+}

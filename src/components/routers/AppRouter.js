@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 // IMPORT PROJECT REFERENCES
 
 import Header from '../Header/Header';
-import  Explore  from '../pages/Explore';
+import  Explore  from '../pages/Explore/Explore.js';
 
 
 
