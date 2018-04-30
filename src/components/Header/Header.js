@@ -17,9 +17,10 @@ export default class HeaderComponent extends React.Component {
         return (
             <div id="header">
                 <div className="_left_wrap">
-                    <div className="logo"><span>{logoImage}</span></div>
+                    <div className="logo"><span dangerouslySetInnerHTML={{__html: logoImage}}></span></div>
                     <Locations />
                     <Categories />
+                    <div className="header_item">Explore</div>
                 </div> 
                <div className="_right_wrap">
                     <Search />

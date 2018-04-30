@@ -43,6 +43,12 @@ $color_grey_light: #8b98ab;
 		}
 	}
 
+	.header_item {
+		height: 100%;
+		line-height: 55px;
+		border-bottom: 1px solid  $color_blue;
+	}
+
 }
 
 
@@ -53,8 +59,20 @@ $color_grey_light: #8b98ab;
 	ul {
 		position: absolute;
 		top: 40px;
-	}
+		background: white;
+		list-style: none;
+		li {
+			padding: 10px;
+			color: $color_grey_light;
 
+			&:hover {
+				color: $color_grey;
+			} 
+		}
+	}
+	p {
+		height: 100%;
+	}
 }
 
 ._show_wrap {
@@ -69,11 +87,11 @@ $color_grey_light: #8b98ab;
 
 }
 
-
 .logo {
 
-	img {
-		width: 100px;
+	max-width: 100px;
+	svg {
+		width: 100%;
 	}
 
 }
@@ -102,9 +120,13 @@ $color_grey_light: #8b98ab;
 }
 
 span.svg_arrow {
-
+	display: inline-block;
+	max-width: 25px;
 	svg {
-		fill: $color_grey;
+		width: 100%;
+	}
+	svg path {
+		fill: $color_blue;
 	}
 	._rotate {
 		transform: rotate(180deg);

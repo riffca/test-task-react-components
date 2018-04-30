@@ -3,6 +3,14 @@
 	border: 1px solid #8b98ab;
 	height: 100px;
 	flex: 1;
+	margin: 10px;
+	border-radius: 10px;
+	position: relative;
+	span:nth-child(2) {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+	}
 
 	&._wide {
 		flex: 2;

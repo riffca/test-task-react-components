@@ -6,7 +6,6 @@ export default class Categories extends React.Component {
     super();
     this.state = {
 	    categories: [
-	    	"Explore",
 	        "Concerts",
 	        "Art",
 	        "Festival",
@@ -23,7 +22,7 @@ export default class Categories extends React.Component {
 	let categories = this.state.categories.map((item, index)=><li  onClick={this.showMenu.bind(this, item)} key={index}>{item}</li>)
 	return (
 		<div id="categories_menu">
-			<p onClick={this.showMenu.bind(this)}> { this.state.selected } </p>
+			<p onClick={this.showMenu.bind(this)}> categories </p>
 	 		{ !this.state.showMenu ? null : <ul>
 	 			{ categories }
 	 		</ul> }
